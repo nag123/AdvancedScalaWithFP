@@ -8,14 +8,14 @@
 
 def mean(xs : Seq[Double]) : Double = {
   if(xs.isEmpty) throw new ArithmeticException("Mean of empty list")
-  else xs.sum/length
+  else xs.sum/xs.length
 }
 
 //After adding option[Double] -> it either returns Double or None
 
-def mean(xs : Seq[Double]) : Option[Double] = {
+def meanwithOption(xs : Seq[Double]) : Option[Double] = {
   if(xs.isEmpty) None
-  else xs.sum/xs.length
+  else Some(xs.sum/xs.length)
 }
 
 /*Another Example*/
